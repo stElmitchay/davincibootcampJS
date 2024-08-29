@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>PART 2</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css" integrity="sha512-Mjxkx+r7O/OLQeKeIBCQ2yspG1P5muhAtv/J+p2/aPnSenciZWm5Wlnt+NOUNA4SHbnBIE/R2ic0ZBiCXdQNUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css" integrity="sha512-ITH3NSfntO7uI5n+BnxGNXpzDUoOsmAXuG37UDONLxNYIdc0EBBOOQ1xyc+t9ag9ETSuBXFApx+Rod0uURfDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/night.min.css" integrity="sha512-bfCyfT+5Js2CKjpiF7yCtTcNlNTtcdAIHV8DfGLCQuTfTEHTU9uEvhQ/Ty4zv3IRtkFQu8DKeM2MHGka+K/cxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+        <style>
+			.reveal code {
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						<img height="250" src="https://media.giphy.com/media/10t57cXgo7x5kI/giphy.gif?cid=790b7611802v6bgg1mosrcaa4j5oyp7fp60kutz061d52olw&ep=v1_gifs_search&rid=giphy.gif&ct=g">
+						</textarea>
+					</section> 
+					<section data-markdown>
+						<textarea data-template>
+						## PART 2
+					</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## GOALS
+
+						- Write JS in an HTML file
+						- Use functions to perform actions
+						- Handle events to react to user behaviour
+						- Use conditionals to decide what to do when
+						- Use loops to repeat actions multiple times
+					</textarea>
+					</section>
+				</section>
+				<section>
+					<section>FUNCTIONS</section>
+					<section>
+						
+						A function is a block of reusable code designed to perform a specific task. Instead of writing the same code multiple times, you can write it once inside a function and then call that function whenever you need to perform that task.
+						
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+						### Declaring a function
+
+						syntax to declare a function
+
+						```js
+						let function sayHello() {
+							console.log("Hello Old lady");	
+						}
+						```
+						</textarea>
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+					calling a function 
+						
+					```js
+						sayHello();  // Output: Hello, World!
+					```
+						</textarea>
+					</section>
+
+					<section data-markdown=>
+						<textarea data-template>
+							***parameters* are the inputs a function expects**
+
+							***arguments* are the actual values the function is called with**
+						
+							```js
+							function functionName(parameter1, parameter2) {
+								// Code using parameter1 and parameter2
+								}
+							```
+
+							```js
+							function greet(name) {
+								console.log("Hello, " + name + "!");
+								}
+								greet("Alice");
+								greet("Bob");    
+							```
+						</textarea>
+						</section>
+					<section data-markdown=>
+						<textarea data-template>
+						from just looking at it what will the output be?
+
+						```js
+						
+						function add(a, b) {
+							return a + b;
+							}
+							let sum = add(5, 3); 
+							console.log(sum);
+
+						```
+							</textarea>
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+						#### return Values from functions
+						
+						```js
+						function functionName(){
+							return value;
+							}
+						```
+
+			
+						```js
+						function add(a, b) {
+							return a + b;
+							}
+							let sum = add(5, 3); 
+							console.log(sum);  
+						```
+						</textarea>
+					</section>
+					
+					<section data-markdown=>
+						<textarea data-template>
+						### Excercise
+						Exercise
+
+						- In the console, declare the following functions:
+						- `multiply`: given 2 numbers, return their product
+						- `yell`: given a lowercase string, log it in all caps to the console
+						- `longerThan`: given 2 arrays, return whether the first is longer than the second
+						</textarea>
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+						### Arrow function
+
+						<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTVlMXlvaWtpdjdlN3Z1eHNxbGh1bm4wdGt2MzFmOTQybXBqaGlkeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2Sq53On8rQHJyGD6/giphy.gif">
+						</textarea>
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+						Syntax 
+						
+						```js
+						let functionName = (parameter1, parameter2) => {
+							// code
+							};
+						```
+						</textarea>	
+					</section>
+					<section data-markdown=>
+						<textarea data-template>
+							example 
+
+							```js
+							let square = (n) => {
+								return n * n;
+								};
+								console.log(square(4));  // Output: 16
+								```
+							</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						### Function Scope
+						Variables declared inside a function are only accessible within that function. This is called function scope. Variables outside the function cannot be accessed from within the function, and vice versa.
+
+						what will happen when we run this
+						```js
+						function example() {
+							let message = "Inside function";
+							console.log(message);
+							}
+							example();
+							console.log(message);
+						</textarea>
+					</section>
+				</section>
+				<section> 
+					<section>EVENTS AND HANDLERS</section>
+				<section data-markdown>
+				<textarea data-template>
+					This concept in JS enable your code to respond to user actions like clicks, key presses, mouse movements, and more. Let's break down what events and event handlers are, how they work, and how to use them in your projects
+				</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						#### What are events
+						An event is any action or occurrence that happens in the browser, which JavaScript can detect and respond to. Common events include clicking a button, typing in a text box, loading a page, or hovering over an element.
+					</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						#### What are event handlers?
+
+						<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW9yZzNkZ3hmM2R0anRvd2l6MjlrNnZ2emM5ZnBkOXlveHR2dGd3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ofT5PzM67qEoeihmo/giphy.gif">
+						</textarea>
+					</section>
+					<section data-markdown=>
+						<textarea data-template=>
+							An event handler is a function that you write to handle or respond to an event. When the event occurs, the event handler runs the code you’ve defined.	
+							```js
+							document.getElementById("myButton").addEventListener
+							("click", function()
+							 {
+								alert("Button was clicked!");
+								});
+
+							```
+						</textarea>	
+					</section>
+					<section data-markdown>
+					<textarea data-template>
+					#### Common Event Types
+					- **`click`**: Occurs when an element is clicked.
+					- **`mouseover`**: Occurs when the mouse pointer is moved over an element.
+					- **`mouseout`**: Occurs when the mouse pointer is moved away from an element.
+					- **`keydown`**: Occurs when a key is pressed down.
+					- **`keyup`**: Occurs when a key is released.
+					- **`submit`**: Occurs when a form is submitted.
+					- **`load`**: Occurs when the page or an image is fully loaded.
+					</textarea>
+
+				</section>
+
+				<section data-markdown="">
+
+					<textarea data-template="">
+						Examples
+						```js
+						// Mouseover event
+						document.getElementById("myDiv").addEventListener("mouseover", function() {
+						this.style.backgroundColor = "lightblue";
+						});
+
+						// Keydown event
+						document.addEventListener("keydown", function(event) {
+						console.log("Key pressed: " + event.key);
+						});
+						```
+					</textarea>
+				</section>
+				<section data-markdown="">
+					<textarea data-template="">
+						### Excercise
+						1. **Button Click Event:**
+							- Create a button with the text `"Click Me!"`. When the button is clicked, display an alert that says `"Button was clicked!"`.
+						2. **Change Text on Hover:**
+							- Create a paragraph with the text `"Hover over me!"`. When the mouse pointer is moved over the paragraph, change the text to `"You hovered over me!"`.
+						3. **Form Submit Event:**
+							- Create a form with a text input and a submit button. When the form is submitted, prevent the default action and log the value of the text input to the console.
+
+					</textarea>
+				</section>
+				</textarea>
+				</section>
+				
+					<section>
+						<section data-markdown="">
+							<textarea data-template="">
+
+								### LOOPS
+								<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTJkeTZ4NDRqdWhqeG9vMGt1ZjNrOXZpaXB4NDZlNm5ld29xZDVsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLbMLWUApYozvc9TGi/giphy.gif">
+							</textarea>
+						</section>
+
+						<section data-markdown="">
+							<textarea data-template="">
+								let's run the same code multiple times
+
+								```js
+								for (let rep = 0; rep < 10; rep += 1) {
+									console.log("now doing rep", rep);
+									}
+									console.log("do you even lift bro");
+								```
+							</textarea>
+
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								There are several types of loops in JS
+								- **`for` loop:** Used when you know in advance how many times you want to repeat a block of code.
+								- **`while` loop:** Used when you want to repeat a block of code as long as a certain condition is true.
+								- **`do...while` loop:** Similar to the `while` loop, but it guarantees that the code block runs at least once before checking the condition.
+								- **`for...in` loop:** Used to iterate over the properties of an object.
+								- **`for...of` loop:** Used to iterate over the elements of an iterable object (like an array).
+							</textarea>
+						</section>
+					</section>
+					<section>
+						
+							<section data-markdown="">
+								<textarea data-template="">
+									## What are conditionals?
+								</textarea>
+							</section>
+							<section data-markdown="">
+								<textarea data-template="">
+									They are the decision-making backbone of your program, enabling it to choose different paths or outputs depending on various factors.
+								</textarea>
+
+							</section>
+
+						<section data-markdown="">
+							<textarea data-template="">
+								if statements let us execute code under a certain condition	
+
+								```js
+								const you = {wannaBeMyLover: true};
+								if (you.wannaBeMyLover) {
+								you.gottaGetWithMyFriends = true;
+								}
+							</textarea>
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								we can use else to run other code if condition is false
+								```js
+								if (you.reallyBugMe) {
+									console.log("Goodbye");
+									} else {
+									console.log("Hello");
+									}
+								```
+							</textarea>
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								What will happen when this code runs?
+								```js
+								if (5 > 4) {
+									console.log("greater than");
+									} else {
+									console.log("less than");
+									}
+								```
+							</textarea>
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								We can chain else and if blocks to account for multiple conditions
+								```js
+								function compare(x, y) {
+									if (x > y) {
+									console.log(x, "is greater than", y);
+									} else if (x < y) {
+									console.log(x, "is less than", y);
+									} else {
+									console.log(x, "is equal to", y);
+									}
+									}
+								```
+							</textarea>
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								The else if statement allows you to check multiple conditions. If the first condition is false, the else if statement checks another condition, and so on.
+								```js
+								let temperature = 15;
+								if (temperature > 25) {
+								console.log("It's hot outside!");
+								} else if (temperature > 15) {
+								console.log("It's warm outside.");
+								} else {
+								console.log("It's cold outside.");
+								}
+								```
+							</textarea>
+						</section>
+						<section data-markdown="">
+							<textarea data-template="">
+								
+								**Exercises**
+								- Write a function that takes a number as an argument and logs whether it’s positive, negative, or zero using an `if-else` statement.
+
+								- Write a function that takes three numbers as arguments and logs the largest of the three using `if-else` statements or a `switch` statement.
+
+								- Write a function that takes a score (0-100) as an argument and logs the grade (`A`, `B`, `C`, `D`, `F`) based on the score using `if-else if-else` statements.
+
+								- Write a function that takes a number as an argument and returns `"Even"` if the number is even and `"Odd"` if it’s odd. Use the ternary operator for this.
+							</textarea>
+						</section>
+					</section>
+					<section data-markdown="">
+						<textarea data-template="">
+							<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGlyOHoyb2RnNW0zaDZ5NDNiMTV1dWhqMzVmZW9namw3MHp2ZjIydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ARzKgdHGspTqLd5EmG/giphy.gif">
+						</textarea>
+					</section>
+				</section>	
+
+				</section>
+			</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js" integrity="sha512-131e3mIrDAyUD075SVzvIjS0g97uDg0+/qAobDHd++h+lgFi4z88DVOpidm06jpb+0PzK4kcm9w79r6EHV0SkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js" integrity="sha512-nLsCkPS/rdxRVOkxiKnld9KhQ24V/5kRChzSZ3MoFODykbWyBlQRsHLrbpN3J4LabYBnXIp1EnRIo3ifvyiQIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js" integrity="sha512-QAU7Ux8iEB53koLKFCtddfFp0D1+uQWoX3ROnRDLeiE98XHOkMciaup0Spc014jQAuJaqz8VjUZdBqriheI4Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js" integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<!-- CopyCode plugin for copy button on code samples -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-copycode@1.0.4/plugin/copycode/copycode.js"></script>
+		
+		<script>
+			// Slides powered by revealjs.com
+			
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, CopyCode ]
+			});
+		
+		</script>
+
+	</body>
+</html>

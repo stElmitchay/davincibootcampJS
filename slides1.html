@@ -1,0 +1,850 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>intro to Frontend Engineering</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css" integrity="sha512-Mjxkx+r7O/OLQeKeIBCQ2yspG1P5muhAtv/J+p2/aPnSenciZWm5Wlnt+NOUNA4SHbnBIE/R2ic0ZBiCXdQNUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css" integrity="sha512-ITH3NSfntO7uI5n+BnxGNXpzDUoOsmAXuG37UDONLxNYIdc0EBBOOQ1xyc+t9ag9ETSuBXFApx+Rod0uURfDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/night.min.css" integrity="sha512-bfCyfT+5Js2CKjpiF7yCtTcNlNTtcdAIHV8DfGLCQuTfTEHTU9uEvhQ/Ty4zv3IRtkFQu8DKeM2MHGka+K/cxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="dist/theme/blood.css" />
+		<!-- Theme used for syntax highlighted code -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/night-owl.min.css" integrity="sha512-i5X6Fdn/ZqvGSqPrdMa3FgcpXM/Nr6YccSKFYT93zljl/HZDEpvBbE5Pxp91eiWGccZLrL/LDQJd7fjTRYsVaA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/a11y-dark.min.css" integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<style>
+			.reveal code {
+				color: var(--r-link-color-hover);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						## Intro to Frontend Engineering
+						### A [Christex Foundation](https://christex.foundation) course by [Mitch](https://x.com/el_saintt)
+					</textarea>
+				</section>
+				<section data-markdown data-separator-vertical="\n--\n">
+					<textarea data-template>
+					### About this course
+
+					- Taking your *first steps* into JavaScript
+					- Practical excercises
+					- This course is designed to be as beginner friendly as possible
+
+					--
+					### Grand plan
+
+					<span style="color:var(--r-background-color);">time</span> | Part 1 | Part 2 |
+					--- | --- | ---
+					topics | DOM <br> datatypes <br>  arrays & objects  | functions <br> events <br> loops & conditionals  
+					
+					--
+					### Ground rules
+
+					- Everyone belongs here!
+					- There are no "dumb" questions
+					- Don't stop doing the little things
+
+					</textarea>
+				</section>
+				<section  data-markdown data-separator-vertical="\n--\n" >
+					<textarea data-template>
+					# Part 1
+
+
+					--
+					### Goals
+
+					- Get hands-on with JS
+					- Explore & modify a web page 
+					- Meet common data types & operators
+					- Declare variables to remember values
+					- Collect values into objects & arrays
+					</textarea>
+				</section>
+
+				<section data-markdown data-separator-vertical="\n--\n">
+					<textarea data-template>
+					## JavaScript!
+					
+					### What? Why? How?
+
+					--
+
+					### What is JS?
+
+					--
+					## Relationship between HTML CSS and JS!
+
+					--
+					Imagine a **restaurant**:
+
+					**HTML** is the **chef** who prepares the food. Without the chef, there is no meal to servejust like without HTML, there is no content on the webpage.
+					<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2V2eGx3MXRidXl0dnl4a3JpZWk2MGxod3dtbTRqOHg3NTJxNmhrbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W2uuQKSXkGcijyqGHb/giphy.gif" alt="Gif of girls performing 'light as a feather, stiff as a board' ritual in 'The Craft'" /> 
+	
+					
+					--
+
+					CSS is the plating artist who arranges the food on the plate to make it look mouthwatering. CSS takes what the chef has made and makes it visually appealing.
+					
+					<img src="https://media.giphy.com/media/jtMhsPbNm9SW0siFun/giphy.gif?cid=790b7611dx0fpwrpx7nflme3dwxsdi59mjz763iyr1rllyf8&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Gif of girls performing 'light as a feather, stiff as a board' ritual in 'The Craft'" /> 
+	
+					--
+					JavaScript is the waiter who interacts with the customers, taking orders, serving food, and responding to requests. JavaScript brings the food to life by adding interactivity.
+					<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzhoaXZ0cm1yYzhxcGl0Z2p2aWtxN2piMng2ejRtNWpmdGY2Y2pmaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JGGxtR7GJVVseoEPZs/giphy.gif" alt="Gif of girls performing 'light as a feather, stiff as a board' ritual in 'The Craft'" /> 
+		
+					--
+
+					### Where do we write JS? 
+
+					--
+
+					The honest answer is we can write anything anywhere. Its not about where you can write JS it about where JS can be interpreted and ran
+
+					- **The browser's JS console**
+					- Local text file in editor, e.g. TextEdit, [VS Code](https://code.visualstudio.com/)
+					- Online playground e.g. [CodePen](https://codepen.io/), [CodeSandbox](https://codesandbox.io/)
+
+					--
+
+
+					<img src="https://media.giphy.com/media/U8FnWSJEgRsxy9256g/giphy.gif?cid=790b76115ysg1t9ynnnocpc2sovswqc8pzy8svcgi4u1k9hf&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Still of girls performing summoning ritual in a circle of candles on the beach, from 'The Craft'" />
+
+
+
+					--
+					- Open up this html page.
+					- inspect the page to open the devTools (right click+ inspect)
+					- Click on the console tab
+					</textarea>
+				</section>
+				
+				<section data-markdown data-separator-vertical="\n--\n" data-auto-animate>
+					<textarea data-template>
+					## The DOM
+
+					### Document Object Model 
+					
+
+					--
+					
+					### A simple `document`
+					
+					```html [ 2-8 | 3 | 4-7 | 5-6]
+					<!DOCTYPE html>
+					<html lang="en-US">
+						<head>...</head>
+						<body>
+							<header>...</header>
+							<div id="board">...</div> 
+						</body>
+					</html>
+					```
+
+					Let's draw the DOM tree! 
+
+					--
+
+					### Reading the DOM with JS
+
+					Let's dig into this `document`!
+
+					--
+
+					```js
+					document
+					```
+
+					<p class="fragment">the entire HTML document</p>
+
+					--
+
+					```js
+					document.title
+					```
+
+					<p class="fragment">the page (document) title</p>
+
+					--
+
+					```js
+					document.body
+					```
+
+					<p class="fragment">the <code>body</code> element</p>
+
+					--
+
+					```js
+					document.body.children
+					```
+
+					<p class="fragment">all the elements within the <code>body</code></p>
+
+				
+
+					--
+
+					```js
+					document.getElementById("board")
+					```
+
+					<div class="fragment" data-fragment-index="2"><pre class="js hljs"><code>document.querySelector("#board")</code></pre></div>
+
+					<p class="fragment" data-fragment-index="1">the (first) element with <code>id="board"</code></p>
+
+					--
+
+					```js
+					document.getElementsByTagName("h1")
+					```
+
+					<div class="fragment" data-fragment-index="2"><pre class="js hljs"> <code>document.querySelectorAll("h1")</code></pre></div>
+
+					<p class="fragment" data-fragment-index="1">all the <code>h1</code> elements</p>
+
+					--
+
+					```js
+					document.getElementsByClassName("player")
+					```
+
+					<div class="fragment" data-fragment-index="2"><pre class="js hljs"><code>document.querySelectorAll(".player")</code></pre></div>
+
+					<p class="fragment" data-fragment-index="1">all the elements with <code>class="player"</code> </p>
+					
+					--
+
+					<pre class="r-fit-text js hljs"><code>document.getElementsByClassName("player").length</code></pre>
+
+					<pre class="r-fit-text js hljs"> <code>document.querySelectorAll(".player").length</code></pre>
+
+					<p class="fragment" >the number of elements with <code>class="player"</code> </p>
+					
+					--
+
+					<pre class="r-fit-text js hljs"><code>document.getElementById("p1-name").textContent</code></pre>
+
+					<p class="fragment">the text inside the element with <code>id="p1-name"</code></p>
+
+
+					--
+
+				 *Do you expect me to remember all this!?!??!*
+
+					<img src="https://media.giphy.com/media/7IWtC0idrXURnCUIyD/giphy.gif?cid=790b7611pqvxpvcj818pjjiuj9rga6v1v9lw28aq66wr68da&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Gif of Steve Urkel looking overwhelmed" />
+
+					--
+
+					- Developer Communities : [Stack Overflow](https://stackoverflow.com)
+					- AI : [Mr ChatGPT](https://chat.openai.com/chat) and friends
+					- [MDN](https://developer.mozilla.org), [W3Schools](https://www.w3schools.com),[geeksforgeeks](https://www.geeksforgeeks.org)			
+					- Daily Practice
+					- [Youtube](https://www.youtube.com)
+
+					--
+
+					## Exercise
+
+					Type commands in the console to retrieve: 
+					1. all the `p` elements 
+					1. the text "X"
+					1. the number of squares in the board
+					1. the text "A game you know"
+
+
+					--
+
+
+					### Editing the DOM with JS
+
+					--
+
+					```js
+					document.title = "My Page"
+					```
+
+					<p class="fragment">change the page title</p>
+					<p class="fragment" style="font-style:italic;">note the double-quotes</p>
+
+					--
+					
+					<pre class="r-fit-text js hljs"><code>document.getElementById("p1-name").textContent = "Sofia"</code></pre>
+
+					<p class="fragment">replace the text of the <code>#p1-name</code> element</p>
+
+
+					--
+
+					<pre class="r-fit-text js hljs"><code>document.getElementById("p1-name").append(" & friends")</code></pre>
+
+					<p class="fragment">add to the end of the element's current text</p>
+
+					--
+
+					## Exercise
+
+					1. Change the player names to you & neighbor
+					1. Swap the player symbols
+					1. Change subtitle to "A game you know and love"
+
+
+					</textarea>
+				</section>
+				<section data-markdown data-separator-vertical="\n--\n">
+					<textarea data-template>
+					## Variables Values and Data Types
+
+					--
+
+					### What are variables?
+
+					
+					Think of a variable as a box with a label on it. This box can store something that you want to keep track of
+
+					--
+					### What are values?	
+					A value is the actual content inside the box. It’s what the variable is storing
+
+					--
+
+					### What are data types?
+					The data type tells you what kind of value is inside the box. Is it a number? A piece of text? A yes/no answer?
+
+					--
+					### JS has two kinds of data types
+					- Primitive types (e.g. strings, numbers)
+					- Objects (e.g. `document` & friends)
+
+					--
+					### Primitive data types
+						- string
+						- number
+						- boolean
+						- undefined
+						- null
+						- arrays
+					--
+						### Excercises
+
+						What data type is each of these values
+
+					- false
+					- true
+					- document.title
+					- “sit”
+					- null
+					--
+
+					## Working with Variables
+					--
+
+
+					```js
+					
+					let myVariable = 5; // Using let (for variables that can change)
+					const pi = 3.14; // Using const (for constant)
+					```
+
+					--
+
+					In JavaScript, you can declare a variable using three keywords: `var`, `let`, and `const`.
+
+					- **`var`:** The oldest way to declare a variable. It has some quirks related to scope, so it's less commonly used in modern JavaScript.
+					- **`let`:** The most commonly used keyword for declaring variables that can change (or be reassigned) later.
+					- **`const`:** Used to declare variables that will not change their value once assigned (i.e., constants)
+					--
+
+					## Assigning a value to a variable
+
+					tells you the type of a value
+
+					```js
+
+					let username = "Alice";    // Declaring and assigning a string value
+					let age = 25;              // Declaring and assigning a number value
+					let isLoggedIn = true;     // Declaring and assigning a boolean value
+					let myVariable;            // Declaring without assigning
+					myVariable = 10;           // Assigning a value later
+					```
+					--
+
+					### Reassigning a variable!
+
+					```js
+					let score = 10:
+					score = 20;
+					const maxScore = 100;
+					maxScore = 200;
+					```
+
+					--
+
+					### **Best Practices for Naming Variables**
+
+					- Use meaningful names: The variable name should describe the value it holds (e.g., `userName`, `totalPrice`).
+					- Follow naming conventions: Use camelCase (e.g., `firstName`, `isLoggedIn`) for variable names.
+					- Avoid reserved words: Don’t use JavaScript keywords (like `let`, `function`, `return`) as variable names.
+					
+					--
+
+					Excercise
+
+					- Declare a variable named `favoriteColor` and assign it the value `"blue"`. Then, log the value to the console.
+					- Declare a variable named `currentYear`, assign it the value `2024`, then reassign it to `2025`. Log the new value to the console.
+					- Declare a constant variable named `birthYear` and assign it the value `2000`. Attempt to reassign it to `2001` and observe what happens.
+					--
+
+					### Working with Strings
+					
+					<img src="https://media.giphy.com/media/l0ExwzsCSv0apIjlK/giphy.gif?cid=790b76114e97jf30gil6q2kmg1vhilf89lzsdta517bz81ry&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Gif of woman gesturing and saying 'blank void of nothingness', from Now Apocalypse on Starz"/>
+					--
+
+					To create a string in JS you declare the variable and assign it value using double double-quotes
+
+					```js
+					
+					let message;
+					message = "Welcome to the JavaScript tutorial.";
+					console.log(message);
+					message = "Let's learn about strings!";
+					console.log(message);
+					```
+					--
+						```js
+						let firstName = "John";
+						let lastName = "Doe";
+						let fullName = firstName + " " + lastName;
+						console.log(fullName);
+						```
+												
+						```js
+						let greeting = "Hello";
+						greeting += ", World!";
+						console.log(greeting);
+					
+						``` 
+
+						```js
+						let message = "JavaScript is fun!";
+						console.log(message.length);
+						```
+						
+						```js
+						
+						let sentence = "The quick brown fox jumps over the lazy dog.";
+						let part = sentence.slice(4, 9);
+						console.log(part);
+
+						```
+						```js
+					
+						let text = "Hello, World!";
+						console.log(text.toUpperCase());
+						console.log(text.toLowerCase());
+
+						```
+					--
+
+					### Excercise
+					- Declare two string variables, `firstName` and `lastName`. Concatenate them into a full name and log it to the console.
+					- Declare a string variable `greeting` with the value `"hello, world!"`. Convert the string to uppercase and log the result to the console.
+					--
+
+						## Operators 
+							<img height=250 src="https://media.giphy.com/media/amreheHAAx4giHFzCX/giphy.gif?cid=790b7611cezt4ttzv51bthdtyg3xrq0etptm5sp5zki36sd1&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Gif of Backstreet Boys singing 'Tell my why, Ain't nothin but a mistake...'" />
+
+					--
+
+					### JS OPERATORS
+
+					- **Arithmetic Operators** help you perform basic math.
+					- **Assignment Operators** assign values to variables.
+					- **Comparison Operators** compare two values and return a boolean.
+					- **Logical Operators** combine boolean values or invert them.
+					--
+
+					### Arithmetic operators
+
+					- `+` add
+					- `-` subtract
+					- `*` multiply
+					- `/` divide
+
+					--
+
+					### Order of operations
+
+					`4 + 1 * 2 * 4 + 2`
+
+					same as in math, use `()` to group
+
+					`((4 + 1) * 2 * 4) + 2`
+
+					--
+
+					## Exercise
+
+					Use arithmetic operators to compute:
+					- The total number of siblings of your parents
+					- The average number of hours you slept this week
+					- The number of dogs you'd pet in a week if you pet 1 dog per hour while awake
+
+					--
+
+					### Comparison operators 
+
+					- `&gt;` greater than
+					- `&lt;` less than
+					- `&gt;=` greater than or equal to
+					- `&lt;=` less than or equal to
+
+					--
+
+					`5 &gt; 4`
+
+					What type of value will this return?
+
+					--
+
+					### Equality operators
+
+
+					strict | loosey-<br>goosey | meaning
+					--- | --- | ---
+					`===` | `==` | equals
+					`!==` | `!=` | does not equal
+
+					--
+
+
+					Do these differ? How? 
+
+
+					strict | vs. | loosey-goosey
+					--- | --- | ---
+					`1 === 1` | vs. | `1 == 1`
+					`"1" === "1"` | vs. | `"1" == "1"`
+					`1 === "1"` | vs. | `1 == "1"`
+
+					<p class="fragment">You should almost always use the <b>strict</b> version</p>
+
+					--
+
+					### JS has lots of operators!
+
+					<p class="fragment">Any guesses what else is out there?</p>
+
+					<p class="fragment">Where can you find them all?</p>
+
+					--
+
+					- Developer Communities : [Stack Overflow](https://stackoverflow.com)
+					- AI : [Mr ChatGPT](https://chat.openai.com/chat) and friends
+					- [MDN](https://developer.mozilla.org), [W3Schools](https://www.w3schools.com),[geeksforgeeks](https://www.geeksforgeeks.org)			
+					- Daily Practice
+					- [Youtube](https://www.youtube.com)
+
+
+					</textarea>
+				</section>
+				<section data-markdown data-separator-vertical="\n--\n">
+					<textarea data-template>
+					## ARRAYS
+					
+
+					<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXF0dWVvdmx0d2poa2VidTlkeWV2cHI4amx2MGp1eDkzdXd6N24ycyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/me5yMEZoxEKVraU1HP/giphy.gif" alt="Image of unfinished beaded bracelet spelling 'ALOHA' with text 'Step 13' in corner, via MuffinChanel " />
+					
+					--
+
+					Arrays let us keep multiple values together in a single collection
+
+					--
+						This is how you declare arrays
+						```js
+						let synonyms = ["plethora", "array", "cornucopia"];
+						```
+						Like strings, arrays have a length
+						```js
+						synonyms.length
+						```
+						And each value has an index
+						```js
+						synonyms[1]
+						synonyms.indexOf("cornucopia")
+						```
+						We can check if an array has a certain value
+						```js
+						synonyms.includes("cornucopia")
+						synonyms.includes("plethora")
+						```
+					--
+						
+					Unlike strings we can modify arrays
+						
+						```js
+						synonyms[1] = "variety";
+						let lastItem = synonyms.pop();
+						synonyms.push("multitude");
+						```
+
+					.push() method adds an element to end of an array
+
+						```js
+						let fruits = ["apple", "banana", "orange"];
+						fruits.push("grape");
+						console.log(fruits);
+						```
+
+						.pop() merthod removes the last element from an array.
+						```js
+						let fruits = ["apple", "banana", "orange"];
+						fruits.pop();
+						console.log(fruits);
+						```
+					--						
+					.shift() method removes the first element from an array.
+						
+						```js
+						let fruits = ["apple", "banana", "cherry"];
+						let firstFruit = fruits.shift();
+						console.log(firstFruit);  // Output: apple
+						console.log(fruits);  // Output: ["banana", "cherry"]
+						```
+
+					.unshift() method adds an element to the beginning of an array
+
+						```js
+						let fruits = ["banana", "cherry"];
+						fruits.unshift("apple");
+						console.log(fruits);  // Output: ["apple", "banana", "cherry"]
+						```
+					--
+		
+					<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXVmcGQwMDU1eG1qOXJlbmk4Y2V4N2htbTJxNTJlaGZsY3M0dzkydCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/CwF1hpvMEaFeedoWBp/giphy.gif" />
+					
+					- Developer Communities : [Stack Overflow](https://stackoverflow.com)
+					- AI : [Mr ChatGPT](https://chat.openai.com/chat) and friends
+					- [MDN](https://developer.mozilla.org), [W3Schools](https://www.w3schools.com),[geeksforgeeks](https://www.geeksforgeeks.org)			
+					- Daily Practice
+					- [Youtube](https://www.youtube.com)
+				
+					--
+
+					MUTATING DATA
+				
+					<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG9pdnh5b282OW00MWh5bzM0dndsNG84bWZiODhqdGttZjhsbzdtayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ddf5O0KqcgtvzLJYu7/giphy.gif" />
+
+					--
+
+
+					DO these do the same thing?
+
+
+					```js
+					let abcArray = ["a", "b", "c"];
+					abcArray[1] = "d";
+					abcArray;	
+					```
+
+					```js
+					let abcString = "abc";
+					abcString[1] = "d";
+					abcString;
+					```
+					--
+
+					Muatable data can be edited (e.g. Arrays)
+					Immutable data always stays the same (e.g. strings & other primitives)
+					--
+
+					DO these do the same thing?
+
+
+					```js
+					let numbers1 = [1, 2, 3];
+					let result = numbers.push(4);
+					numbers1	
+					```
+
+					```js
+					let numbers2 = [1, 2, 3];
+					let result = numbers2.contact(4);
+					numbers2;
+					```
+					--
+
+					What happens when you use `const` with a mutable value like an array?
+
+					```js
+					const operands = [4, 6];
+					const sum = operands[0] + operands[1];
+					operands[0] = 5;
+					const newSum = operands[0] + operands[1];
+					```
+					</textarea>
+				</section>
+				<section data-markdown data-separator-vertical="\n--\n">
+					<textarea data-template>
+					## Objects
+
+					An object is a collection of properties, where each property is a key-value pair. Think of it like a real-world object, such as a car or a person. A car has properties like color, make, and model, while a person has properties like name, age, and height.
+					--
+
+					Example 
+
+					```js
+					let person{
+						name: "John",
+						age: 30,
+						height: "6ft"
+					}
+					```
+					--
+
+					### Accessing Object Properties
+					
+					Use the dot . followed by the key.
+					```js
+					console.log(person.name);
+					```
+					```js
+					person.age = 31;
+					console.log(person.age);
+					```
+					You can change the value of a property by assigning a new value to it
+					--
+					you can add new properties to an object
+					```js
+					person.nationality ="lebanese";
+					person["city"] = "Beirut";
+					console.log(person);
+					```
+					--
+					Removing properties from an object
+					```js
+					delete person["city"];
+					console.log(person);
+					```
+					--
+					You can check if a property exists in an object using the in operator or the hasOwnProperty method
+					
+					--
+
+					using the `in`
+					```js
+					console.log("city" in person);
+					console.log("nationality" in person);
+					```
+					--
+					
+					You can check if a property exists in an object using the hasOwnProperty
+
+					```js
+					console.log(person.hasOwnProperty("city"));
+					console.log(person.hasOwnProperty("nationality"));
+					```
+					--
+					### Nested Objects
+
+					```js
+					let student = {
+						name: "Alice",
+						age: 22,
+						grades: {
+						math: "A",
+						science: "B+",
+						literature: "A-"
+						}
+						};
+						console.log(student.grades.math);  // Output: A
+						console.log(student.grades["science"]);  // Output: B+
+					```
+					--
+					### Objects in Arrays & Objects
+					```js
+						const spices = [
+						{name: "Emma", nickname: "Baby"},
+						{name: "Geri", nickname: "Ginger"},
+						{name: "Mel B", nickname: "Scary"},
+						{name: "Mel C", nickname: "Sporty"},
+						{name: "Victoria", nickname: "Posh"}
+						];
+						const spiceGirls = {
+						albums: ["Spice", "Spiceworld", "Forever"],
+						motto: "Girl Power",
+						members: spices
+						};
+					```
+					--
+					### Built in objects
+
+					Have we worked with any complex objects already?
+
+					What properties & methods have we used already
+					--
+
+					### `document`
+
+					```js
+					document.title = "Tic Tac Toe";
+					document.querySelector("h2").append(" and love");				
+					```
+					--
+
+					What other properties does `document` have? 
+
+					How can you find out? 
+					--
+
+					- Developer Communities : [Stack Overflow](https://stackoverflow.com)
+					- AI : [Mr ChatGPT](https://chat.openai.com/chat) and friends
+					- [MDN](https://developer.mozilla.org), [W3Schools](https://www.w3schools.com),[geeksforgeeks](https://www.geeksforgeeks.org)			
+					- Daily Practice
+					- [Youtube](https://www.youtube.com)
+					
+					--
+				
+				<img src="https://media.giphy.com/media/vhvoTnF6r5zLiA1OY8/giphy.gif?cid=ecf05e47ijvxlgk3wmo5xb2htix357od8hk79dnvwmwe8bbb&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+					
+					--
+							
+					<img src="https://media.giphy.com/media/TJUDqthsi2htym4TN0/giphy.gif?cid=ecf05e47ijvxlgk3wmo5xb2htix357od8hk79dnvwmwe8bbb&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+					
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js" integrity="sha512-131e3mIrDAyUD075SVzvIjS0g97uDg0+/qAobDHd++h+lgFi4z88DVOpidm06jpb+0PzK4kcm9w79r6EHV0SkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js" integrity="sha512-nLsCkPS/rdxRVOkxiKnld9KhQ24V/5kRChzSZ3MoFODykbWyBlQRsHLrbpN3J4LabYBnXIp1EnRIo3ifvyiQIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js" integrity="sha512-QAU7Ux8iEB53koLKFCtddfFp0D1+uQWoX3ROnRDLeiE98XHOkMciaup0Spc014jQAuJaqz8VjUZdBqriheI4Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js" integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<!-- CopyCode plugin for copy button on code samples -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-copycode@1.0.4/plugin/copycode/copycode.js"></script>
+		
+		<script>
+			// Slides powered by revealjs.com
+			
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, CopyCode ]
+			});
+		
+		</script>
+
+	</body>
+</html>
